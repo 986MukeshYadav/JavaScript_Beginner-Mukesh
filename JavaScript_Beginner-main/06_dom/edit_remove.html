@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom with Mukesh</title>
+</head>
+<body style="background-color: #212121; color: #ffff;">
+    <ul class="language">
+        <li>JavaScript</li>
+    </ul>
+    
+</body>
+<script>
+    function addLanguage(langName){
+        const li=document.createElement("li");
+        li.innerHTML=`${langName}`
+        document.querySelector('.language').appendChild(li)
+    }
+    addLanguage("Python")
+    addLanguage("typeScript")
+
+    function addOptimum(langName){
+        const li = document.createElement('li');
+        li.appendChild(document.createTextNode(langName))
+        document.querySelector('.language').appendChild(li)
+    }
+    addOptimum("Java")
+
+//Edit
+const secondLang = document.querySelector("li:nth-child(2)")
+// secondLang.innerHTML = "C++"
+const newli = document.createElement('li')
+newli.textContent = "C++"
+secondLang.replaceWith(newli)
+
+//Another method to Edit 
+const firstLang = document.querySelector("li:first-child")
+firstLang.outerHTML='<li>TypeScript</li>'
+
+//remove
+const lastLang = document.querySelector('li:last-child')
+lastLang.remove()
+
+
+</script>
+</html>
