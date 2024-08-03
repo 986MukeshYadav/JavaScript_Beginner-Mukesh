@@ -1,3 +1,7 @@
+// The call() method takes arguments separately.
+// The apply() method takes arguments as an array.
+
+
 function setUsername(username){
     //complex DB calls
     this.username = username
